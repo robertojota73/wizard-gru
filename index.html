@@ -46,17 +46,9 @@
       flex-direction: column;
       margin-bottom: 15px;
     }
-    .container::-webkit-scrollbar {
-      width: 8px;
-    }
-    .container::-webkit-scrollbar-track {
-      background: rgba(0,0,0,0.2);
-      border-radius: 10px;
-    }
-    .container::-webkit-scrollbar-thumb {
-      background: var(--brand);
-      border-radius: 10px;
-    }
+    .container::-webkit-scrollbar { width: 8px; }
+    .container::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); border-radius: 10px; }
+    .container::-webkit-scrollbar-thumb { background: var(--brand); border-radius: 10px; }
     .header {
       background: linear-gradient(135deg, var(--brand), var(--brand-strong));
       padding: 16px 24px;
@@ -247,12 +239,7 @@
     }
     @media (max-width: 580px) {
       body { padding: 10px; }
-      .container {
-        border-radius: 16px;
-        margin-bottom: 10px;
-        height: auto;
-        max-height: 90vh;
-      }
+      .container { border-radius: 16px; margin-bottom: 10px; height: auto; max-height: 90vh; }
       .header { padding: 14px 20px; }
       .logo-area img { max-width: 80px; }
       #crmform { padding: 16px 20px; }
@@ -260,13 +247,7 @@
       .header h1 { font-size: 16px; }
       .header p { font-size: 11px; }
       .crmform-label { font-size: 11px; }
-      .crmform-input,
-      .crmform-select,
-      input,
-      select {
-        font-size: 12px;
-        padding: 8px 10px;
-      }
+      .crmform-input, .crmform-select, input, select { font-size: 12px; padding: 8px 10px; }
       .hint { font-size: 9px; }
       .modal-content { padding: 30px 20px; }
       .success-icon { width: 60px; height: 60px; margin-bottom: 15px; }
@@ -275,18 +256,7 @@
       .modal-content p { font-size: 13px; margin-bottom: 20px; }
       .btn { padding: 10px 20px; font-size: 13px; }
     }
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.85);
-      z-index: 9999;
-      align-items: center;
-      justify-content: center;
-      animation: fadeIn 0.4s;
-      backdrop-filter: blur(5px);
-    }
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 9999; align-items: center; justify-content: center; animation: fadeIn 0.4s; backdrop-filter: blur(5px); }
     .modal.active { display: flex; }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     .modal-content {
@@ -300,88 +270,29 @@
       animation: slideUp 0.4s ease-out;
       box-shadow: 0 20px 60px rgba(0,0,0,.5);
     }
-    @keyframes slideUp {
-      from { transform: translateY(60px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
+    @keyframes slideUp { from { transform: translateY(60px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     .success-icon {
-      width: 70px;
-      height: 70px;
-      margin: 0 auto 20px;
+      width: 70px; height: 70px; margin: 0 auto 20px;
       background: linear-gradient(135deg, var(--success), #229954);
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       box-shadow: 0 8px 24px rgba(39, 174, 96, 0.4);
       animation: pulse 2s infinite;
     }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
-    .success-icon svg {
-      width: 40px;
-      height: 40px;
-      stroke: white;
-      stroke-width: 3;
-    }
-    .modal-content h2 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 24px;
-      color: var(--ink);
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
-    .modal-content p {
-      color: var(--muted);
-      margin-bottom: 28px;
-      line-height: 1.5;
-      font-size: 14px;
-    }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+    .success-icon svg { width: 40px; height: 40px; stroke: white; stroke-width: 3; }
+    .modal-content h2 { font-family: 'Montserrat', sans-serif; font-size: 24px; color: var(--ink); margin-bottom: 12px; font-weight: 700; }
+    .modal-content p { color: var(--muted); margin-bottom: 28px; line-height: 1.5; font-size: 14px; }
     .btn-group { display: grid; gap: 10px; }
-    .btn {
-      padding: 12px 24px;
-      border: none;
-      border-radius: 10px;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      font-family: inherit;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-    }
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-      color: white;
-      box-shadow: 0 8px 18px rgba(243, 156, 18, 0.3);
-    }
-    .btn-primary:hover {
-      background: linear-gradient(135deg, var(--accent-strong), #d35400);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(243, 156, 18, 0.4);
-    }
-    .btn-secondary {
-      background: transparent;
-      color: var(--brand);
-      border: 2px solid var(--brand);
-    }
-    .btn-secondary:hover {
-      background: rgba(74, 144, 226, 0.1);
-      transform: translateY(-1px);
-    }
-    .skillpro-footer {
-      margin-top: 15px;
-      text-align: center;
-    }
-    .skillpro-footer img {
-      max-width: 100px;
-      height: auto;
-      opacity: 0.7;
-      transition: opacity 0.3s ease;
-    }
+    .btn { padding: 12px 24px; border: none; border-radius: 10px; font-size: 14px; font-weight: 700; cursor: pointer; transition: all 0.2s ease; font-family: inherit; text-transform: uppercase; letter-spacing: 0.02em; }
+    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-strong)); color: white; box-shadow: 0 8px 18px rgba(243, 156, 18, 0.3); }
+    .btn-primary:hover { background: linear-gradient(135deg, var(--accent-strong), #d35400); transform: translateY(-2px); box-shadow: 0 12px 24px rgba(243, 156, 18, 0.4); }
+    .btn-secondary { background: transparent; color: var(--brand); border: 2px solid var(--brand); }
+    .btn-secondary:hover { background: rgba(74, 144, 226, 0.1); transform: translateY(-1px); }
+    .skillpro-footer { margin-top: 15px; text-align: center; }
+    .skillpro-footer img { max-width: 100px; height: auto; opacity: 0.7; transition: opacity 0.3s ease; }
     .skillpro-footer img:hover { opacity: 1; }
+    .crmform-hidden { display: none; }
   </style>
 </head>
 <body>
@@ -394,14 +305,13 @@
       <p>Preencha os dados abaixo</p>
     </div>
     <form autocomplete="off" role="form" method="post" action="" id="crmform" data-crm-form="crmform" enctype="multipart/form-data" novalidate>
-      <input name="crmform[formId]" value="39" id="formId" type="hidden">
-      <input name="crmform[workspace_id]" value="" id="workspace_id" type="hidden">
-      <input name="crmform[media_id]" value="1156" id="media_id" type="hidden">
-      <input name="crmform[source_type]" value="FormularioExterno" id="source_type" type="hidden">
-      <input name="crmform[campaign_id]" value="" id="campaign_id" type="hidden">
-      <input name="crmform[description]" value="" id="description" type="hidden">
+      <input name="crmform[formId]" value="39" id="formId" class="crmform-hidden" type="hidden">
+      <input name="crmform[workspace_id]" id="workspace_id" class="crmform-hidden" type="hidden">
+      <input name="crmform[media_id]" value="1156" id="media_id" class="crmform-hidden" type="hidden">
+      <input name="crmform[source_type]" value="FormularioExterno" id="source_type" class="crmform-hidden" type="hidden">
+      <input name="crmform[campaign_id]" value="" id="campaign_id" class="crmform-hidden" type="hidden">
+      <input name="crmform[description]" value="" id="description" class="crmform-hidden" type="hidden">
       <input type="hidden" id="phone_number_hidden" name="crmform[phone_number]">
-      <input type="hidden" id="crmform_ddi" name="crmform[DDI]">
       <input type="hidden" id="crmform_product_id" name="crmform[product_id]">
       <div class="crmform-row">
         <label for="name" class="crmform-label">
@@ -410,7 +320,7 @@
           </svg>
           Nome <span class="required">*</span>
         </label>
-        <input type="text" id="name" name="crmform[name]" required placeholder="Ex: João Silva" class="crmform-input" autocomplete="off">
+        <input type="text" id="name" name="crmform[name]" required placeholder="Ex: João Silva" class="crmform-input">
       </div>
       <div class="crmform-row">
         <label for="email" class="crmform-label">
@@ -419,7 +329,7 @@
           </svg>
           E-mail
         </label>
-        <input type="email" id="email" name="crmform[email]" placeholder="seu@email.com" class="crmform-input" autocomplete="off">
+        <input type="email" id="email" name="crmform[email]" placeholder="seu@email.com" class="crmform-input">
       </div>
       <div class="crmform-row">
         <label for="phone_number_display" class="crmform-label">
@@ -436,7 +346,7 @@
             <option value="34">ES +34</option>
             <option value="39">IT +39</option>
           </select>
-          <input type="tel" id="phone_number_display" required placeholder="(11) 99999-9999" class="crmform-input" autocomplete="off">
+          <input type="tel" id="phone_number_display" required placeholder="(11) 99999-9999" class="crmform-input">
         </div>
         <div class="hint">
           <svg class="hint-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -455,17 +365,17 @@
         </label>
         <select id="workspace_select" required class="crmform-select">
           <option value="">Selecione</option>
-          <option value="5136">Santo Amaro - Vendas</option>
-          <option value="5132">WizKids Guarulhos - Vendas</option>
-          <option value="5135">Vila Ré - Vendas</option>
-          <option value="5134">Guarulhos Centro - Vendas</option>
           <option value="5133">Chácara Urbana - Vendas</option>
           <option value="5131">Eloy Chaves - Vendas</option>
+          <option value="5134">Guarulhos Centro - Vendas</option>
           <option value="5098">O. Jd. Das Flores - Vendas</option>
-          <option value="5097">O. Santo Antonio - Vendas</option>
           <option value="5096">O. Centro - Vendas</option>
+          <option value="5097">O. Santo Antonio - Vendas</option>
           <option value="5095">O. Vila Remédios - Vendas</option>
+          <option value="5136">Santo Amaro - Vendas</option>
           <option value="6164">Tatuapé - Vendas</option>
+          <option value="5135">Vila Ré - Vendas</option>
+          <option value="5132">WizKids Guarulhos - Vendas</option>
         </select>
       </div>
       <div class="crmform-row">
@@ -477,29 +387,29 @@
         </label>
         <select id="product_select" required class="crmform-select">
           <option value="">Selecione</option>
-          <optgroup label="Inglês">
-            <option value="4547">Inglês - Presencial</option>
-            <option value="4551">Inglês - Online</option>
+          <optgroup label="Alemão">
+            <option value="4556">Alemão - Online</option>
+            <option value="4558">Alemão - Presencial</option>
           </optgroup>
           <optgroup label="Chinês">
             <option value="4546">Chinês - Online</option>
             <option value="4548">Chinês - Presencial</option>
           </optgroup>
-          <optgroup label="Francês">
-            <option value="4549">Francês - Online</option>
-            <option value="4552">Francês - Presencial</option>
-          </optgroup>
-          <optgroup label="Italiano">
-            <option value="4550">Italiano - Presencial</option>
-            <option value="4553">Italiano - Online</option>
-          </optgroup>
           <optgroup label="Espanhol">
             <option value="4554">Espanhol - Online</option>
             <option value="4555">Espanhol - Presencial</option>
           </optgroup>
-          <optgroup label="Alemão">
-            <option value="4556">Alemão - Online</option>
-            <option value="4558">Alemão - Presencial</option>
+          <optgroup label="Francês">
+            <option value="4549">Francês - Online</option>
+            <option value="4552">Francês - Presencial</option>
+          </optgroup>
+          <optgroup label="Inglês">
+            <option value="4547">Inglês - Presencial</option>
+            <option value="4551">Inglês - Online</option>
+          </optgroup>
+          <optgroup label="Italiano">
+            <option value="4553">Italiano - Online</option>
+            <option value="4550">Italiano - Presencial</option>
           </optgroup>
           <optgroup label="Japonês">
             <option value="4557">Japonês - Online</option>
@@ -583,7 +493,6 @@
         const productName = document.getElementById("product_select").options[document.getElementById("product_select").selectedIndex].text;
         document.getElementById("workspace_id").value = workspaceId;
         document.getElementById("phone_number_hidden").value = fullPhone;
-        document.getElementById("crmform_ddi").value = ddi;
         document.getElementById("crmform_product_id").value = productId;
         const description = [
           `Nome: ${name}`,
@@ -592,12 +501,10 @@
           `Unidade: ${workspaceName}`,
           `Idioma: ${productName}`,
           `Origem: Formulário Externo`,
-          `Mídia: 1156`,
+          `Mídia: Formulário GRU Wizard`,
           `Observações: Cadastro Interno Equipe GRU Wizard`
         ].join("\n");
         document.getElementById("description").value = description;
-        if (email) document.querySelector('input[name="crmform[email]"]').value = email;
-        console.log("Dados preparados:", { name, phone: fullPhone, workspace_id: workspaceId, product_id: productId });
       }
       function showSuccess(){
         document.getElementById("successModal").classList.add("active");
@@ -613,7 +520,11 @@
         const form = document.getElementById("crmform");
         const submitBtn = document.getElementById("submit");
         form.addEventListener("submit", function(e){
-          if (!validateForm()) { e.preventDefault(); return false; }
+          if (!validateForm()) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+          }
           prepareFormData();
           submitBtn.disabled = true;
           submitBtn.innerHTML = '<span class="spinner"></span>Enviando...';
